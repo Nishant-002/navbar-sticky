@@ -1,0 +1,134 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Times New Roman", Times, serif;
+}
+.content {
+  max-width: 80rem;
+  margin: auto;
+  /* background: black; */
+}
+.navbar {
+  position: fixed;
+  z-index: 10;
+  width: 100%;
+  height: 4rem;
+  transition: all 0.5s ease;
+}
+.navbar.sticky {
+  background: wheat;
+  padding: 0.4rem 0rem;
+}
+.navbar.sticky .logo a {
+  color: rgb(246, 3, 3);
+}
+.navbar .content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar .logo a {
+  font-size: 3rem;
+  font-style: italic;
+  font-weight: 600;
+  margin: 0.5rem 0rem 1rem 3rem;
+  text-decoration: none;
+  color: deepskyblue;
+}
+.list {
+  display: inline-flex;
+}
+.list li {
+  list-style: none;
+}
+.list li a {
+  font-size: 1.5rem;
+  color: rgb(253, 253, 253);
+  margin: 1rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+.navbar.sticky .list li a {
+  color: rgb(3, 3, 246);
+}
+.list li a:hover {
+  color: rgb(206, 37, 34);
+  text-decoration: underline;
+}
+.navbar.sticky .list li a:hover {
+  color: fuchsia;
+}
+img {
+  height: 1.5rem;
+}
+.menu-icons {
+  background-color: yellow;
+  cursor: pointer;
+  display: none;
+}
+.cancel-icons {
+  position: absolute;
+  right: 0.8rem;
+  top: 1.2rem;
+  background-color: yellow;
+  cursor: pointer;
+  display: none;
+}
+.image {
+  height: 100vh;
+  background: url("bholenath.jpg") no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+.about {
+  padding: 3rem 0rem;
+}
+h1 {
+  text-align: center;
+  font-style: italic;
+  font-size: 4rem;
+  text-decoration: underline;
+}
+p {
+  text-align: justify;
+  font-size: 1.2rem;
+  padding: 1rem;
+  margin: 0.5rem;
+}
+@media (max-width: 768px) {
+  .menu-icons {
+    display: block;
+  }
+  .menu-icons.hide {
+    display: none;
+  }
+  .cancel-icons {
+    display: block;
+  }
+  .cancel-icons.hide {
+    display: none;
+  }
+
+  .navbar .list {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    height: 100vh;
+    width: 100%;
+    max-width: 25rem;
+    text-align: center;
+    background: black;
+    display: block;
+    transition: all 0.5s ease;
+  }
+  .navbar .list.active {
+    left: 0;
+  }
+  .navbar .list li {
+    margin-top: 3.5rem;
+    font-size: 3rem;
+    font-weight: 600;
+  }
+}
